@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Router from "next/router";
 
-export default Home = () => {
+const Home = () => {
   //...
   useEffect(() => {
     const { pathname } = Router;
@@ -11,3 +11,5 @@ export default Home = () => {
   });
   //...
 };
+
+export default Home;
