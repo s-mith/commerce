@@ -1,15 +1,18 @@
-import React, { useEffect } from "react";
-import Router from "next/router";
+import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react';
 
-const Home = () => {
-  //...
-  useEffect(() => {
-    const { pathname } = Router;
-    if (pathname === "/") {
-      Router.push("/you");
-    }
-  });
-  //...
-};
+export default function Page() {
+    const router = useRouter()
 
-export default Home;
+    useEffect(() => {
+        const { pathname } = router;
+        if (pathname === "/") {
+            router.push("/you")
+        }
+    } , [])
+
+    return (
+        <div> 
+        </div>
+    )
+}
